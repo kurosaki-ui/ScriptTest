@@ -18,7 +18,7 @@ public class Boss
 	}
 	public void MagicAttack()
 	{
-		if(this.mp > 5)
+		if(this.mp >= 5)
 		{
 			this.mp = mp - 5;
 			Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
@@ -53,8 +53,12 @@ public class Test : MonoBehaviour
 			midboss.MagicAttack();
 		}
 		
+		for(int i=0; i<array.Length; i++)
+		{
+			Debug.Log(array[i]);
+		}
 
-		for(int i = 4; i >= 0; i--)
+		for(int i = array.Length - 1; i >= 0; i--)
 		{
 			Debug.Log(array[i]);
 		}
